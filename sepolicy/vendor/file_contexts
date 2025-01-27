@@ -47,9 +47,6 @@
 # Motobox
 /(vendor|system/vendor)/bin/motobox                                                    u:object_r:vendor_motobox_exec:s0
 
-# MultiHal
-/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.devonf-multihal                                                   u:object_r:hal_sensors_default_exec:s0
-
 # NFC
 /dev/nq-nfc                                                                            u:object_r:nfc_device:s0
 /dev/nq-nci                                                                            u:object_r:nfc_device:s0
@@ -62,4 +59,3 @@
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
-/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.devonf                         u:object_r:hal_lineage_touch_default_exec:s0

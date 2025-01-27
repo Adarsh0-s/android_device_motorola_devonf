@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/motorola/devonf
+
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
@@ -18,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # Add vendor log tags
-include $(LOCAL_PATH)/configs/properties/vendor_log_tags.mk
+include $(DEVICE_PATH)/configs/properties/vendor_log_tags.mk
 
 # A/B
 PRODUCT_PACKAGES += \
@@ -78,16 +80,16 @@ PRODUCT_PACKAGES += \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+    $(DEVICE_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
+    $(DEVICE_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(DEVICE_PATH)/configs/audio/audio_em.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_em.xml \
+    $(DEVICE_PATH)/configs/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
+    $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(DEVICE_PATH)/configs/audio/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+    $(DEVICE_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    $(DEVICE_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
+    $(DEVICE_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
+    $(DEVICE_PATH)/configs/audio/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
@@ -110,7 +112,7 @@ PRODUCT_PACKAGES += \
 
 # Cgroup
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+    $(DEVICE_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Dex-pre-opt exclusions
 $(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
@@ -165,12 +167,12 @@ PRODUCT_BOOT_JARS += \
     mediatek-ims-oem-plugin
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc) \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
@@ -190,15 +192,15 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_c2_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_shim1.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_performance_c2_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2_shim1.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_shim1.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    $(LOCAL_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+    $(DEVICE_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(DEVICE_PATH)/configs/media/media_codecs_c2_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_shim1.xml \
+    $(DEVICE_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(DEVICE_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    $(DEVICE_PATH)/configs/media/media_codecs_performance_c2_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2_shim1.xml \
+    $(DEVICE_PATH)/configs/media/media_codecs_shim1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_shim1.xml \
+    $(DEVICE_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    $(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(DEVICE_PATH)/configs/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml
@@ -292,7 +294,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.android.hotwordenrollment.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.android.hotwordenrollment.xml
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.android.hotwordenrollment.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.android.hotwordenrollment.xml
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6855
@@ -310,7 +312,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Power Off Alarm
 PRODUCT_PACKAGES += \
@@ -337,16 +339,16 @@ PRODUCT_PACKAGES += \
     ueventd.mt6855.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6855:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6855 \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6855.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6855.rc
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6855:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6855 \
+    $(DEVICE_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6855.rc \
+    $(DEVICE_PATH)/rootdir/etc/init.recovery.mt6855.rc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/init.recovery.mt6855.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sensors/,$(TARGET_COPY_OUT_VENDOR)/etc/sensors)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/sensors/,$(TARGET_COPY_OUT_VENDOR)/etc/sensors)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
@@ -358,13 +360,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/lineage/interfaces/power-libperfmgr \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.mediatek
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    $(DEVICE_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # USB
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
@@ -395,7 +397,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/devonf/devonf-vendor.mk)

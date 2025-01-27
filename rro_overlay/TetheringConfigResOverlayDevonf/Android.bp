@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "TetheringConfigResOverlayDevonf",
-    vendor: true
+    vendor: true,
 }

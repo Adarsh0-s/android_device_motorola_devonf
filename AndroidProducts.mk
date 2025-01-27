@@ -6,4 +6,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_devonf.mk
+    $(LOCAL_DIR)/lineage_devonf.mk

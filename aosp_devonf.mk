@@ -24,7 +24,6 @@ PRODUCT_MODEL := moto g73 5G
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=devonf_g_sys \
-    PRIVATE_BUILD_DESC="devonf_g_sys-user 14 U1TNS34M.82-12-7-4 00d08 release-keys"
-
-BUILD_FINGERPRINT := motorola/devonf_g_sys/devonf:14/U1TNS34M.82-12-7-4/00d08:user/release-keys
+    DeviceName=devonf \
+    BuildDesc="devonf_g_sys-user 12 U1TNS34.82-12-7-4 00d08 release-keys" \
+BuildFingerprint=motorola/devonf_g_sys/devonf:14/U1TNS34M.82-12-7-4/00d08:user/release-keys

@@ -6,4 +6,4 @@ ril.subscription.types=RUIM
 ro.mot.build.customerid=global
 ro.surface_flinger.enable_frame_rate_override=true
 ro.telephony.default_network=27,27
-ro.vendor.radio.imei.sv=23
+ro.vendor.radio.imei.sv=25

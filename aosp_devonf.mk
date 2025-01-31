@@ -25,5 +25,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=devonf \
-    BuildDesc="devonf_g_sys-user 12 U1TNS34.82-12-7-4 00d08 release-keys" \
-BuildFingerprint=motorola/devonf_g_sys/devonf:14/U1TNS34M.82-12-7-4/00d08:user/release-keys
+    BuildDesc="devonf_g_sys-user 12 U1TNS34.82-12-7-8 4f333 release-keys" \
+BuildFingerprint=motorola/devonf_g_sys/devonf:14/U1TNS34M.82-12-7-8/4f333:user/release-keys

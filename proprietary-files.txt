@@ -1,4 +1,4 @@
-# Device proprietary files - From devonf_g_sys-user 14 U1TNS34M.82-12-7-4 00d08 release-keys, unless pinned
+# Device proprietary files - From devonf_g_sys-user 14 U1TNS34M.82-12-7-8 4f333 release-keys, unless pinned
 
 # AEE
 vendor/lib/libaedv.so

@@ -1106,7 +1106,7 @@ vendor/lib/libion_mtk.so
 vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libmmprofile.so
-vendor/lib/libnpagent.so
+vendor/lib/libnpagent.so;DISABLE_CHECKELF
 vendor/lib/libpixelflinger.so
 vendor/lib/libpqframework.so
 vendor/lib/librgbwlightsensor.so
@@ -1141,7 +1141,7 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libmmprofile.so
-vendor/lib64/libnpagent.so
+vendor/lib64/libnpagent.so;DISABLE_CHECKELF
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/libpqframework.so
@@ -1312,7 +1312,7 @@ vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # Graphics - from cancunf 15 V1TD35H.58
-vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|e449440e5662e9c9cf6b9740fc21ba40cce024e7
+vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek|e1ae66a207aadba9defbd107ee1c8c6d37875dcb
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc|d9c0d008cc081ab1cf602036962a3fa20b630135
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml|1e696e7404336fef2fb3e51af24daefd285fe896
 vendor/etc/meow.cfg|59b2389725cc6805794fc4d1febbb5d6aa88e042
@@ -1415,7 +1415,7 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
 system_ext/lib64/libcomutils.so
-system_ext/lib64/libimsma.so
+system_ext/lib64/libimsma.so;DISABLE_DEPS
 system_ext/lib64/libimsma_adapt.so
 system_ext/lib64/libimsma_rtp.so
 system_ext/lib64/libimsma_socketwrapper.so
@@ -1428,7 +1428,7 @@ system_ext/lib64/libvcodec_cap.so
 system_ext/lib64/libvcodec_capenc.so
 system_ext/lib64/libvt_avsync.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|aee568e770a3835af2df2262c9dc8bb2911da324
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/hw/vtservice_hidl
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -1442,12 +1442,12 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
-vendor/lib/libthha.so
+vendor/lib/libthha.so;DISABLE_CHECKELF
 vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/libdecrypt.so
 vendor/lib64/libkmsetkey.so
-vendor/lib64/libthha.so
+vendor/lib64/libthha.so;DISABLE_CHECKELF
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
@@ -1485,7 +1485,7 @@ vendor/lib/AVCSecureVdecCA.so
 vendor/lib/HEVCSecureVdecCA.so
 vendor/lib/VP9SecureVdecCA.so
 vendor/lib/libAVCSecureVencCA.so
-vendor/lib/libHEVCdec_sa.ca7.android.so
+vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libMtkOmxAdpcmDec.so
 vendor/lib/libMtkOmxAlacDec.so
@@ -1501,27 +1501,27 @@ vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
 vendor/lib/libformatter.so
 vendor/lib/libh264dec_customize.so
-vendor/lib/libh264dec_sa.ca7.so
-vendor/lib/libh264dec_sd.ca7.so
-vendor/lib/libh264dec_se.ca7.so
-vendor/lib/libh264enc_sa.ca7.so
+vendor/lib/libh264dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_sd.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264dec_se.ca7.so;DISABLE_CHECKELF
+vendor/lib/libh264enc_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libhdrvideo.so
-vendor/lib/libhevce_sb.ca7.android.so
+vendor/lib/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib/libicd_decoder.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
 vendor/lib/libjpeg-alpha_vendor.so
 vendor/lib/libmp3dec_mtk.so
-vendor/lib/libmp4enc_sa.ca7.so
-vendor/lib/libmp4enc_xa.ca7.so
+vendor/lib/libmp4enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libmp4enc_xa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libstagefrighthw.so
-vendor/lib/libvcodec_oal.so
+vendor/lib/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib/libvcodec_utility_plat.mt6789.so
 vendor/lib/libvcodec_utility_plat.mt6855.so
 vendor/lib/libvcodec_utility_plat.mt6879.so
 vendor/lib/libvcodecdrv_header_stub.so
-vendor/lib/libvp8dec_sa.ca7.so
-vendor/lib/libvp8enc_sa.ca7.so
-vendor/lib/libvp9dec_sa.ca7.so
+vendor/lib/libvp8dec_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp8enc_sa.ca7.so;DISABLE_CHECKELF
+vendor/lib/libvp9dec_sa.ca7.so;DISABLE_CHECKELF
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
 vendor/lib64/AVCSecureVdecCA.so
@@ -1537,12 +1537,12 @@ vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libhevce_sb.ca7.android.so
+vendor/lib64/libhevce_sb.ca7.android.so;DISABLE_CHECKELF
 vendor/lib64/libicd_decoder.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libstagefrighthw.so
-vendor/lib64/libvcodec_oal.so
+vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
 vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
@@ -1592,9 +1592,9 @@ vendor/etc/AW_DSP.bin
 vendor/etc/AW_SINWAVE_DSP.bin
 vendor/etc/init/bootperf.rc
 vendor/etc/vhw.xml
-vendor/lib/mt6855/libsrv_um.so;SYMLINK=vendor/lib/libsrv_um.so
+vendor/lib/mt6855/libsrv_um.so;DISABLE_CHECKELF
 vendor/lib/mt6855/libufwriter.so;SYMLINK=vendor/lib/libufwriter.so
-vendor/lib/mt6855/libusc.so;SYMLINK=vendor/lib/libusc.so
+vendor/lib/mt6855/libusc.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libusc.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libiqi_bridge.so
 vendor/lib/liblog_vendor.so
@@ -1606,11 +1606,11 @@ vendor/lib64/mt6855/libacdk.so;SYMLINK=vendor/lib64/libacdk.so
 vendor/lib64/mt6855/liblpcnr.so;SYMLINK=vendor/lib64/liblpcnr.so
 vendor/lib64/mt6855/libmfllcore.so;SYMLINK=vendor/lib64/libmfllcore.so
 vendor/lib64/mt6855/libmsnr.so;SYMLINK=vendor/lib64/libmsnr.so
-vendor/lib64/mt6855/libsrv_um.so;SYMLINK=vendor/lib64/libsrv_um.so
+vendor/lib64/mt6855/libsrv_um.so;DISABLE_CHECKELF
 vendor/lib64/mt6855/libufwriter.so;SYMLINK=vendor/lib64/libufwriter.so
-vendor/lib64/mt6855/libusc.so;SYMLINK=vendor/lib64/libusc.so
+vendor/lib64/mt6855/libusc.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libusc.so
 vendor/lib64/jcos_client.so
-vendor/lib64/libBSTSWAD.so
+vendor/lib64/libBSTSWAD.so;DISABLE_CHECKELF
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libVkLayer_mtk_rt_sdk.so
 vendor/lib64/libdynamiclog.so
@@ -1666,8 +1666,8 @@ vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
 vendor/etc/nnapi_powerhal.json
-vendor/lib/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib/libneuralnetworks_sl_driver_mtk_prebuilt.so
-vendor/lib/mt6855/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib/libneuron_adapter_mgvi.so
+vendor/lib/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
+vendor/lib/mt6855/libneuron_adapter_mgvi.so;DISABLE_CHECKELF
 vendor/lib/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib/libnir_neon_driver.so
 vendor/lib/libapu_mdw.so
 vendor/lib/libapu_mdw_batch.so
@@ -1681,19 +1681,19 @@ vendor/lib/libneuroeara.so
 vendor/lib/libneuron_graph_delegate.mtk.so
 vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
-vendor/lib/libtflite_mtk.so
+vendor/lib/libtflite_mtk.so;DISABLE_CHECKELF
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.2.so
-vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
-vendor/lib64/mt6855/libneuron_adapter_mgvi.so;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
+vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF
+vendor/lib64/mt6855/libneuron_adapter_mgvi.so;DISABLE_CHECKELF
 vendor/lib64/mt6855/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
 vendor/lib64/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
 vendor/lib64/APUWareApusysServer.so
 vendor/lib64/APUWareHmpServer.so
-vendor/lib64/APUWareUtilsServer.so
+vendor/lib64/APUWareUtilsServer.so;DISABLE_CHECKELF
 vendor/lib64/libapu_mdw.so
 vendor/lib64/libapu_mdw_batch.so
 vendor/lib64/libapusys.so
@@ -1722,7 +1722,7 @@ vendor/lib64/libneuron_graph_delegate.mtk.so
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
-vendor/lib64/libtflite_mtk.so
+vendor/lib64/libtflite_mtk.so;DISABLE_CHECKELF
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
 vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
@@ -1751,7 +1751,7 @@ vendor/lib64/libpn557_fw.so
 vendor/lib64/libpn560_fw.so
 vendor/lib64/libsn100u_fw.so
 vendor/lib64/libsn220u_fw.so
-vendor/lib64/ls_client.so
+vendor/lib64/ls_client.so;DISABLE_CHECKELF
 
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service

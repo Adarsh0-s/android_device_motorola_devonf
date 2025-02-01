@@ -15,6 +15,8 @@ $(call inherit-product, device/motorola/devonf/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 PRODUCT_NAME := aosp_devonf
 PRODUCT_DEVICE := devonf
 PRODUCT_MANUFACTURER := motorola
